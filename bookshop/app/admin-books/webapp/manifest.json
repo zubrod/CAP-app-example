@@ -75,14 +75,15 @@
           "type": "Component",
           "id": "BooksList",
           "name": "sap.fe.templates.ListReport",
+          "useNewActionForCreate": true,
           "options": {
             "settings": {
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "actions": {
-                    "PaulsAction": {
-                      "press": "bookshop.admin-books.handler.action.execute",
-                      "text": "Test 123",
+                    "testPaulsAction": {
+                      "type": "Action",
+                      "text": "Test asdasdasdasd",
                       "enabled": true,
                       "visible": true
                     }

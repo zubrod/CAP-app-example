@@ -5,8 +5,6 @@ module.exports = class AdminService extends cds.ApplicationService {
 
     const { Books } = this.entities
 
-
-
     /**
      * Generate IDs for new Books drafts
      */
@@ -15,7 +13,13 @@ module.exports = class AdminService extends cds.ApplicationService {
       const { ID: id1 } = await SELECT.one.from(Books).columns('max(ID) as ID')
       const { ID: id2 } = await SELECT.one.from(Books.drafts).columns('max(ID) as ID')
       req.data.ID = Math.max(id1 || 0, id2 || 0) + 1
+    });
+
+    this.on('testPaulsAction', Books, async req => {
+      return { stock: 2 }
     })
+
+
     return super.init()
   }
 }
