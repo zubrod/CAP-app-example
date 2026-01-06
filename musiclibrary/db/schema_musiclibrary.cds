@@ -16,12 +16,17 @@ entity Songs : managed {
         releaseDate : Date;
 }
 
+
 entity Collections : managed {
     key ID          : Integer;
         title       : String @mandatory;
         releaseDate : Date;
         type        : String;
-        songs       : Association to Songs;
+}
+
+entity SongCollections : managed {
+    key song       : Association to Songs;
+    key collection : Association to Collections;
 }
 
 entity Interprets : managed {
@@ -30,3 +35,6 @@ entity Interprets : managed {
         songs         : Association to many Songs
                             on songs.interpret = $self;
 }
+
+
+annotate Songs with @fiori.draft.enabled;

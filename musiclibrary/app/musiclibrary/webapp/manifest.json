@@ -85,28 +85,28 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "ListOfSongsList",
-          "target": "ListOfSongsList"
+          "name": "SongsList",
+          "target": "SongsList"
         },
         {
-          "pattern": "ListOfSongs({key}):?query:",
-          "name": "ListOfSongsObjectPage",
-          "target": "ListOfSongsObjectPage"
+          "pattern": "Songs({key}):?query:",
+          "name": "SongsObjectPage",
+          "target": "SongsObjectPage"
         }
       ],
       "targets": {
-        "ListOfSongsList": {
+        "SongsList": {
           "type": "Component",
-          "id": "ListOfSongsList",
+          "id": "SongsList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/ListOfSongs",
+              "contextPath": "/Songs",
               "variantManagement": "Page",
               "navigation": {
-                "ListOfSongs": {
+                "Songs": {
                   "detail": {
-                    "route": "ListOfSongsObjectPage"
+                    "route": "SongsObjectPage"
                   }
                 }
               },
@@ -120,14 +120,14 @@
             }
           }
         },
-        "ListOfSongsObjectPage": {
+        "SongsObjectPage": {
           "type": "Component",
-          "id": "ListOfSongsObjectPage",
+          "id": "SongsObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/ListOfSongs"
+              "contextPath": "/Songs"
             }
           }
         }

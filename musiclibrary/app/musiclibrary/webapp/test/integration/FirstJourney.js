@@ -10,24 +10,24 @@ sap.ui.define([
         opaTest("Start application", function (Given, When, Then) {
             Given.iStartMyApp();
 
-            Then.onTheListOfSongsList.iSeeThisPage();
+            Then.onTheSongsList.iSeeThisPage();
 
         });
 
 
         opaTest("Navigate to ObjectPage", function (Given, When, Then) {
             // Note: this test will fail if the ListReport page doesn't show any data
-            
-            When.onTheListOfSongsList.onFilterBar().iExecuteSearch();
-            
-            Then.onTheListOfSongsList.onTable().iCheckRows();
 
-            When.onTheListOfSongsList.onTable().iPressRow(0);
-            Then.onTheListOfSongsObjectPage.iSeeThisPage();
+            When.onTheSongsList.onFilterBar().iExecuteSearch();
+
+            Then.onTheSongsList.onTable().iCheckRows();
+
+            When.onTheSongsList.onTable().iPressRow(0);
+            Then.onTheSongsObjectPage.iSeeThisPage();
 
         });
 
-        opaTest("Teardown", function (Given, When, Then) { 
+        opaTest("Teardown", function (Given, When, Then) {
             // Cleanup
             Given.iTearDownMyApp();
         });
