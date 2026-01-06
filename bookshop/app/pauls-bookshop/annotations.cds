@@ -12,8 +12,8 @@ annotate AdminService.Books with {
                 ValueListProperty: 'ID',
             },
             {
-                $Type             : 'Common.ValueListParameterDisplayOnly',
-                ValueListPfroperty: 'name',
+                $Type            : 'Common.ValueListParameterDisplayOnly',
+                ValueListProperty: 'name',
             },
             {
                 $Type            : 'Common.ValueListParameterDisplayOnly',
@@ -60,7 +60,12 @@ annotate AdminService.Books with @(UI.LineItem: [
     },
     {
         $Type : 'UI.DataFieldForAction',
-        Action: 'AdminService.testPaulsAction',
+        Action : 'AdminService.testPaulsAction',
         Label : 'testPaulsAction',
+    },
+    {
+        $Type : 'UI.DataFieldForAction',
+        Action : 'AdminService.EntityContainer/testUnboundAction',
+        Label : 'testUnboundAction',
     },
 ]);

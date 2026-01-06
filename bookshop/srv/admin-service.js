@@ -20,6 +20,13 @@ module.exports = class AdminService extends cds.ApplicationService {
     })
 
 
+    this.on('testUnboundAction', async req => {
+      return { testNumber: 42 }
+    })
+
+
+
+
     return super.init()
   }
 }
