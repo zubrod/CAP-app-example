@@ -1,5 +1,5 @@
 {
-  "name": "bookshop",
+  "name": "musiclibrary",
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
@@ -12,11 +12,13 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-pauls-bookshop": "cds watch --open paulsbookshop/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-pauls-bookshop": "cds watch --open paulsbookshop/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-musiclibrary": "cds watch --open musiclibrary/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "sapux": [
-    "app/pauls-bookshop"
+    "app/pauls-bookshop",
+    "app/musiclibrary"
   ],
   "cds": {
     "requires": {
