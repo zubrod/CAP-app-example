@@ -114,26 +114,16 @@
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
+              "share": {
+                "showSendEmail": false
+              },
               "editableHeaderContent": true,
-              "entitySet": "Books",
+              "contextPath": "/Books",
               "liveMode": true,
               "navigation": {
                 "Books": {
                   "detail": {
                     "route": "BooksObjectPage"
-                  }
-                }
-              },
-              "controlConfiguration": {
-                "@com.sap.vocabularies.UI.v1.LineItem": {
-                  "actions": {
-                    "123123": {
-                      "press": "paulsbookshop...Component.fsdfsdf",
-                      "visible": true,
-                      "enabled": true,
-                      "requiresSelection": false,
-                      "text": "123123"
-                    }
                   }
                 }
               }
@@ -146,6 +136,9 @@
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
+              "share": {
+                "showSendEmail": false
+              },
               "editableHeaderContent": false,
               "contextPath": "/Books"
             }

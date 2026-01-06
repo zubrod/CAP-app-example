@@ -12,13 +12,11 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-pauls-bookshop": "cds watch --open paulsbookshop/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-shopwithcustomactions": "cds watch --open shopwithcustomactions/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-pauls-bookshop": "cds watch --open paulsbookshop/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "sapux": [
-    "app/pauls-bookshop",
-    "app/shopwithcustomactions"
+    "app/pauls-bookshop"
   ],
   "cds": {
     "requires": {

@@ -10,5 +10,3 @@ using from './genres/fiori-service';
 using from './common';
 
 using from './pauls-bookshop/annotations';
-
-using from './shopwithcustomactions/annotations';
