@@ -14,6 +14,7 @@ entity Songs : managed {
         title       : String                    @mandatory;
         length      : String;
         releaseDate : Date;
+        collection  : Association to Collections;
 }
 
 
@@ -22,12 +23,10 @@ entity Collections : managed {
         title       : String @mandatory;
         releaseDate : Date;
         type        : String;
+        songs       : Association to many Songs
+                          on songs.collection = $self;
 }
 
-entity SongCollections : managed {
-    key song       : Association to Songs;
-    key collection : Association to Collections;
-}
 
 entity Interprets : managed {
     key ID            : Integer;
@@ -38,3 +37,5 @@ entity Interprets : managed {
 
 
 annotate Songs with @fiori.draft.enabled;
+annotate Collections with @fiori.draft.enabled;
+annotate Interprets with @fiori.draft.enabled;

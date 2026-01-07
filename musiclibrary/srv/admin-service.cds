@@ -12,7 +12,7 @@ service AdminService {
 
   action testUnboundAction() returns {
     testNumber : Integer
-  }
+  };
 
   entity Genres  as projection on my.Genres;
 

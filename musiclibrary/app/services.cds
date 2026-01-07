@@ -12,3 +12,5 @@ using from './common';
 using from './pauls-bookshop/annotations';
 
 using from './musiclibrary/annotations';
+
+using from './musiclibrary-admin-interprets/annotations';
